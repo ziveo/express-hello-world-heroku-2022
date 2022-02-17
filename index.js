@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   res.cookie('cookieName', 'cookieValue', {
@@ -15,5 +15,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://127.0.0.1:${port}`);
+  console.log(`Example app listening on port http://127.0.0.1:${PORT}`);
 });
